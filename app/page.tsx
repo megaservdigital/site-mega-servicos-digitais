@@ -237,13 +237,26 @@ export default function MegaServicosDigitaisSite() {
     }, 500);
   }
 
-  return (
-    <div className="min-h-screen bg-[#07111f] text-white selection:bg-cyan-400/30 selection:text-white">
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/15 blur-3xl" />
-        <div className="absolute right-0 top-64 h-80 w-80 rounded-full bg-blue-500/10 blur-3xl" />
-        <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-cyan-300/10 blur-3xl" />
-      </div>
+return (
+  <div className="relative min-h-screen bg-[#07111f] text-white selection:bg-cyan-400/30 selection:text-white">
+    <div className="pointer-events-none absolute inset-0 overflow-hidden">
+
+      {/* FUNDO DE CIRCUITOS */}
+      <div
+        className="absolute inset-0 opacity-[0.35]"
+        style={{
+          backgroundImage: "url('/circuit-bg-2.png')",
+          backgroundSize: "1800px",
+          backgroundPosition: "top left",
+          backgroundRepeat: "repeat",
+        }}
+      />
+
+      <div className="absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/15 blur-3xl" />
+      <div className="absolute right-0 top-64 h-80 w-80 rounded-full bg-blue-500/10 blur-3xl" />
+      <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-cyan-300/10 blur-3xl" />
+
+    </div>
 
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#07111f]/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
