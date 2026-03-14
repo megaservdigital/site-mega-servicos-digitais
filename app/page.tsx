@@ -154,6 +154,7 @@ export default function MegaServicosDigitaisSite() {
     { label: 'Início', href: '#inicio' },
     { label: 'Empresa', href: '#empresa' },
     { label: 'Como funciona', href: '#como-funciona' },
+    { label: 'Compliance', href: '/compliance' },
     { label: 'Contato', href: '#contato' },
   ];
 
@@ -458,6 +459,13 @@ export default function MegaServicosDigitaisSite() {
             <p className="mt-4 text-sm leading-7 text-slate-300">
               As informações enviadas por este site são utilizadas exclusivamente para contato, análise inicial da solicitação e continuidade do atendimento comercial da empresa.
             </p>
+
+            <a
+              href="/compliance"
+              className="mt-6 inline-flex rounded-2xl bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:scale-[1.02]"
+            >
+              Acessar Compliance Center
+            </a>
           </div>
         </section>
 
@@ -588,6 +596,25 @@ export default function MegaServicosDigitaisSite() {
             </a>
             <a href="#como-funciona" className="transition hover:text-cyan-300">
               Como funciona
+            </a>
+            <a href="/compliance" className="transition hover:text-cyan-300">
+              Compliance Center
+            </a>
+            <a
+              href="/politicas/politica-privacidade-mega-servicos-digitais.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:text-cyan-300"
+            >
+              Privacidade
+            </a>
+            <a
+              href="/politicas/termos-de-uso-mega-servicos-digitais.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:text-cyan-300"
+            >
+              Termos
             </a>
             <a href="#contato" className="transition hover:text-cyan-300">
               Contato
