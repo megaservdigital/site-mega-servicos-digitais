@@ -237,26 +237,22 @@ export default function MegaServicosDigitaisSite() {
     }, 500);
   }
 
-return (
-  <div className="relative min-h-screen bg-[#07111f] text-white selection:bg-cyan-400/30 selection:text-white">
-    <div className="pointer-events-none absolute inset-0 overflow-hidden">
-
-      {/* FUNDO DE CIRCUITOS */}
-      <div
-        className="absolute inset-0 opacity-[0.35]"
-        style={{
-          backgroundImage: "url('/circuit-bg-2.png')",
-          backgroundSize: "1800px",
-          backgroundPosition: "top left",
-          backgroundRepeat: "repeat",
-        }}
-      />
-
-      <div className="absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/15 blur-3xl" />
-      <div className="absolute right-0 top-64 h-80 w-80 rounded-full bg-blue-500/10 blur-3xl" />
-      <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-cyan-300/10 blur-3xl" />
-
-    </div>
+  return (
+    <div className="relative min-h-screen bg-[#07111f] text-white selection:bg-cyan-400/30 selection:text-white">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-[0.35]"
+          style={{
+            backgroundImage: "url('/circuit-bg-2.png')",
+            backgroundSize: '1800px',
+            backgroundPosition: 'top left',
+            backgroundRepeat: 'repeat',
+          }}
+        />
+        <div className="absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/15 blur-3xl" />
+        <div className="absolute right-0 top-64 h-80 w-80 rounded-full bg-blue-500/10 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-cyan-300/10 blur-3xl" />
+      </div>
 
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#07111f]/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
@@ -584,13 +580,27 @@ return (
         href={WHATSAPP_LINK}
         target="_blank"
         rel="noreferrer"
-        className="fixed bottom-6 right-6 rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-900/40 transition hover:scale-105"
+        aria-label="Fale conosco pelo WhatsApp"
+        className="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center"
       >
-        WhatsApp
+        <span className="absolute h-16 w-16 rounded-full bg-green-500/35 animate-ping" />
+        <span className="absolute h-16 w-16 rounded-full bg-green-500/20 blur-md" />
+        <span className="relative flex h-16 w-16 items-center justify-center rounded-full bg-green-500 text-white shadow-2xl shadow-green-900/40 transition duration-300 hover:scale-110">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            width="30"
+            height="30"
+            fill="currentColor"
+          >
+            <path d="M19.11 17.29c-.27-.14-1.59-.79-1.83-.88-.24-.09-.41-.14-.58.14-.17.27-.67.88-.82 1.06-.15.18-.31.2-.58.07-.27-.14-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.41.12-.55.13-.13.27-.31.41-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.58-1.39-.79-1.9-.2-.48-.41-.41-.58-.42h-.5c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27 0 1.34.97 2.63 1.1 2.81.14.18 1.9 2.9 4.61 4.07.64.28 1.14.44 1.53.56.64.2 1.22.17 1.68.1.51-.08 1.59-.65 1.81-1.27.22-.62.22-1.15.15-1.27-.07-.12-.24-.2-.51-.34z" />
+            <path d="M16.01 3.2c-7.05 0-12.8 5.74-12.8 12.79 0 2.26.59 4.47 1.72 6.41L3.2 28.8l6.56-1.72c1.86 1.02 3.95 1.56 6.25 1.56h.01c7.05 0 12.79-5.74 12.79-12.79S23.06 3.2 16.01 3.2zm0 23.33c-2.05 0-4.06-.55-5.82-1.58l-.42-.25-3.89 1.02 1.04-3.79-.27-.44a10.64 10.64 0 0 1-1.64-5.64c0-5.91 4.81-10.72 10.72-10.72 5.91 0 10.72 4.81 10.72 10.72 0 5.91-4.81 10.68-10.72 10.68z" />
+          </svg>
+        </span>
       </a>
 
-      <footer className="border-t border-white/10 bg-[#050c16]">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-400 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+      <footer className="border-t border-white/10 bg-[#02060d]">
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-200 drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)] lg:flex-row lg:items-center lg:justify-between lg:px-8">
           <div>
             <div className="font-medium text-white">Mega Serviços Digitais Ltda</div>
             <div>Intermediação e agenciamento de serviços e negócios em geral</div>
@@ -601,23 +611,23 @@ return (
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <a href="#inicio" className="transition hover:text-cyan-300">
+            <a href="#inicio" className="text-slate-200 transition hover:text-cyan-300">
               Início
             </a>
-            <a href="#empresa" className="transition hover:text-cyan-300">
+            <a href="#empresa" className="text-slate-200 transition hover:text-cyan-300">
               Empresa
             </a>
-            <a href="#como-funciona" className="transition hover:text-cyan-300">
+            <a href="#como-funciona" className="text-slate-200 transition hover:text-cyan-300">
               Como funciona
             </a>
-            <a href="/compliance" className="transition hover:text-cyan-300">
+            <a href="/compliance" className="text-slate-200 transition hover:text-cyan-300">
               Compliance Center
             </a>
             <a
               href="/politicas/politica-privacidade-mega-servicos-digitais.pdf"
               target="_blank"
               rel="noreferrer"
-              className="transition hover:text-cyan-300"
+              className="text-slate-200 transition hover:text-cyan-300"
             >
               Privacidade
             </a>
@@ -625,11 +635,11 @@ return (
               href="/politicas/termos-de-uso-mega-servicos-digitais.pdf"
               target="_blank"
               rel="noreferrer"
-              className="transition hover:text-cyan-300"
+              className="text-slate-200 transition hover:text-cyan-300"
             >
               Termos
             </a>
-            <a href="#contato" className="transition hover:text-cyan-300">
+            <a href="#contato" className="text-slate-200 transition hover:text-cyan-300">
               Contato
             </a>
           </div>
